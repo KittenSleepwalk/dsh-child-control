@@ -1,0 +1,52 @@
+{
+  "name": "@kittensleepwalk/dsh-child-control",
+  "version": "0.1.0",
+  "description": "DSH 子智能体/子进程管理器：一键真正停止全部子智能体，并列出当前会话的完整子进程表单（新增 / 停止 / 发送提示词 / 删除会话）。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "subagent",
+    "child-process",
+    "subagent-control"
+  ],
+  "author": "kittensleepwalk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KittenSleepwalk/dsh-child-control.git"
+  },
+  "homepage": "https://github.com/KittenSleepwalk/dsh-child-control#readme",
+  "bugs": {
+    "url": "https://github.com/KittenSleepwalk/dsh-child-control/issues"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}
